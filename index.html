@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Devbhoomi - Uttarakhand Tourism App (Premium)</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="header-bg-image" id="app-header">
+        
+        <div class="header-content" id="home-header-content">
+            <div class="header-logo">
+                <i data-lucide="mountain"></i>
+            </div>
+            <div class="header-icons">
+                <button class="header-icon-button" id="search-button-home">
+                    <i data-lucide="search"></i>
+                </button>
+                <button class="header-icon-button" id="theme-toggle-button">
+                    <i data-lucide="moon" id="theme-icon"></i>
+                </button>
+                <button class="header-icon-button" id="notification-button">
+                    <i data-lucide="bell"></i>
+                    <span class="header-icon-label" id="notification-label">3</span>
+                </button>
+                <button class="header-icon-button">
+                    <i data-lucide="user"></i>
+                </button>
+            </div>
+        </div>
+        
+        <div class="header-content discover-header" id="discover-header-content" style="display: none;">
+             <div class="header-icons">
+                 <button class="header-icon-button" id="theme-toggle-button-discover">
+                     <i data-lucide="moon" id="theme-icon-discover"></i>
+                 </button>
+                 <button class="header-icon-button">
+                     <i data-lucide="map-pin"></i>
+                 </button>
+                 <button class="header-icon-button">
+                     <i data-lucide="user"></i>
+                 </button>
+            </div>
+        </div>
+
+        <div class="header-content discover-header" id="routes-header-content" style="display: none;">
+             <div class="header-icons">
+                 <button class="header-icon-button" id="theme-toggle-button-routes">
+                     <i data-lucide="moon" id="theme-icon-routes"></i>
+                 </button>
+                 <button class="header-icon-button">
+                     <i data-lucide="map-pin"></i>
+                 </button>
+                 <button class="header-icon-button">
+                     <i data-lucide="user"></i>
+                 </button>
+            </div>
+        </div>
+        
+        <div class="header-content discover-header" id="map-header-content" style="display: none;">
+             <div class="header-icons">
+                 <button class="header-icon-button" id="theme-toggle-button-map">
+                     <i data-lucide="moon" id="theme-icon-map"></i>
+                 </button>
+                 <button class="header-icon-button">
+                     <i data-lucide="map-pin"></i>
+                 </button>
+                 <button class="header-icon-button">
+                     <i data-lucide="user"></i>
+                 </button>
+            </div>
+        </div>
+
+        <div class="header-title-overlay" id="home-header-title">
+            <h1>Discover Devbhoomi</h1>
+            <p>The Land of Gods, beckons your spirit.</p>
+        </div>
+        
+        <div class="header-title-overlay" id="discover-header-title" style="display: none;">
+            <h1>The Discover Hub</h1>
+            <p>Explore places, experiences, and curated trips.</p>
+        </div>
+
+        <div class="header-title-overlay" id="routes-header-title" style="display: none;">
+            <h1>Scenic Driving Routes</h1>
+            <p>Optimized paths, live traffic & safe stops.</p>
+        </div>
+        
+        <div class="header-title-overlay" id="map-header-title" style="display: none;">
+            <h1>Live GPS & Map</h1>
+            <p>Real-time traffic, points of interest, and route planning.</p>
+        </div>
+    </div>
+
+    <div class="main-content">
+        
+        <div id="home-page">
+            
+            <div class="image-slider-container fade-in-up" data-delay="0">
+                <div class="image-slider">
+                    <div class="slider-item">
+                        <img src="https://images.unsplash.com/photo-1590740921430-85f269c279a0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Rishikesh Ganga Aarti">
+                        <div class="slider-text-overlay">
+                            <h3>Rishikesh: Yoga & Adventure</h3>
+                            <p>The global capital of yoga and gateway to the Himalayas.</p>
+                        </div>
+                    </div>
+                    <div class="slider-item">
+                        <img src="https://images.unsplash.com/photo-1596773223010-8535091ff18d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Kedarnath Temple">
+                         <div class="slider-text-overlay">
+                            <h3>Kedarnath Temple</h3>
+                            <p>A sacred shrine located near the Mandakini river, dedicated to Lord Shiva.</p>
+                        </div>
+                    </div>
+                    <div class="slider-item">
+                        <img src="https://images.unsplash.com/photo-1597813586828-569b9177114b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Valley of Flowers">
+                        <div class="slider-text-overlay">
+                            <h3>Valley of Flowers Trek</h3>
+                            <p>Home to endemic alpine flora and a UNESCO World Heritage Site.</p>
+                        </div>
+                    </div>
+                    <div class="slider-item">
+                        <img src="https://images.unsplash.com/photo-1614050201088-752109489f0a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Nainital Lake">
+                        <div class="slider-text-overlay">
+                            <h3>Nainital: Lake District</h3>
+                            <p>The tranquil Naini Lake surrounded by seven majestic hills (Sapt-Shring).</p>
+                        </div>
+                    </div>
+                    <div class="slider-item">
+                        <img src="https://images.unsplash.com/photo-1588698948197-2a5b6d5733f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Auli Ski Resort">
+                        <div class="slider-text-overlay">
+                            <h3>Auli: Winter Skiing Hub</h3>
+                            <p>Enjoy panoramic views of Nanda Devi and world-class snow sports.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-controls">
+                    <span class="slider-dot active" data-slide="0"></span>
+                    <span class="slider-dot" data-slide="1"></span>
+                    <span class="slider-dot" data-slide="2"></span>
+                    <span class="slider-dot" data-slide="3"></span>
+                    <span class="slider-dot" data-slide="4"></span>
+                </div>
+            </div>
+            
+            <div class="quick-stats-card fade-in-up" data-delay="100">
+                <div class="stat-item">
+                    <i data-lucide="map-pin"></i>
+                    <span class="stat-value">42</span>
+                    <span class="stat-label">Destinations</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <i data-lucide="route"></i>
+                    <span class="stat-value">12</span>
+                    <span class="stat-label">Routes</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <i data-lucide="star"></i>
+                    <span class="stat-value">4.8</span>
+                    <span class="stat-label">Avg. Rating</span>
+                </div>
+            </div>
+
+            <h2 class="section-title fade-in-up" data-delay="200">Explore by Theme</h2>
+            <div class="quick-access-grid fade-in-up" data-delay="300">
+                <div class="theme-tile">
+                    <i data-lucide="church"></i>
+                    <span>Spiritual</span>
+                </div>
+                <div class="theme-tile">
+                    <i data-lucide="leaf"></i>
+                    <span>Nature Treks</span>
+                </div>
+                <div class="theme-tile">
+                    <i data-lucide="tent"></i>
+                    <span>Adventure</span>
+                </div>
+                <div class="theme-tile">
+                    <i data-lucide="paw-print"></i>
+                    <span>Wildlife Safaris</span>
+                </div>
+                <div class="theme-tile">
+                    <i data-lucide="camera"></i>
+                    <span>Photography</span>
+                </div>
+                <div class="theme-tile">
+                    <i data-lucide="hotel"></i>
+                    <span>Stays & Food</span>
+                </div>
+            </div>
+            
+            <h2 class="section-title fade-in-up" data-delay="400">Live Info Strip</h2>
+            <div class="live-info-strip fade-in-up" data-delay="500">
+                <div class="info-item">
+                    <i data-lucide="cloud-sun"></i>
+                    <span>15°C / Clear</span>
+                    <span class="label">Dehradun Weather</span>
+                </div>
+                <div class="info-item">
+                    <i data-lucide="traffic-cone"></i>
+                    <span>LOW (Nainital: Med)</span>
+                    <span class="label">Road & Traffic Alerts</span>
+                </div>
+                <div class="info-item">
+                    <i data-lucide="users"></i>
+                    <span>95% Capacity</span>
+                    <span class="label">Today's Footfall</span>
+                </div>
+                <div class="info-item">
+                    <i data-lucide="trending-up"></i>
+                    <span>+1.2% YoY</span>
+                    <span class="label">Tourism Growth</span>
+                </div>
+            </div>
+
+            <h2 class="section-title fade-in-up" data-delay="600">How to Reach Uttarakhand</h2>
+            <div class="travel-guide-card fade-in-up" data-delay="700">
+                <div class="mode-item">
+                    <i data-lucide="plane"></i>
+                    <h4>By Air</h4>
+                    <p>Major airport: **Jolly Grant Airport (DED)**, Dehradun. Connects to major Indian cities.</p>
+                </div>
+                <div class="mode-item">
+                    <i data-lucide="train"></i>
+                    <h4>By Rail</h4>
+                    <p>Main railheads are **Haridwar, Dehradun, and Kathgodam**. Excellent connectivity from Delhi.</p>
+                </div>
+                <div class="mode-item">
+                    <i data-lucide="bus"></i>
+                    <h4>By Road</h4>
+                    <p>National Highways (NH) ensure smooth travel. Regular state and private buses are available.</p>
+                </div>
+            </div>
+            
+            <h2 class="section-title fade-in-up" data-delay="800">Premium Recommendations</h2>
+            <div class="recommendation-carousel fade-in-up" data-delay="900">
+                <div class="rec-card">
+                    <div class="rec-image trend-1">
+                         <div class="rating"><i data-lucide="star" style="width: 14px; height: 14px; fill: #f1c40f;"></i> 4.7</div>
+                    </div>
+                    <div class="rec-content">
+                        <h4>Auli Ski Resort</h4>
+                        <p>Enjoy world-class skiing and breathtaking views of Nanda Devi peak.</p>
+                    </div>
+                </div>
+                <div class="rec-card">
+                    <div class="rec-image trend-2">
+                        <div class="rating"><i data-lucide="star" style="width: 14px; height: 14px; fill: #f1c40f;"></i> 4.5</div>
+                    </div>
+                    <div class="rec-content">
+                        <h4>Tehri Dam Adventure Zone</h4>
+                        <p>India's highest dam reservoir, offering water sports, boating, and jet skiing.</p>
+                    </div>
+                </div>
+                 <div class="rec-card">
+                    <div class="rec-image trend-3">
+                        <div class="rating"><i data-lucide="star" style="width: 14px; height: 14px; fill: #f1c40f;"></i> 4.4</div>
+                    </div>
+                    <div class="rec-content">
+                        <h4>Munsiyari: Little Kashmir</h4>
+                        <p>A serene hamlet at the base of the Himalayan peaks, perfect for trekking and mountaineering.</p>
+                    </div>
+                </div>
+                <div class="rec-card">
+                    <div class="rec-image trend-6">
+                        <div class="rating"><i data-lucide="star" style="width: 14px; height: 14px; fill: #f1c40f;"></i> 4.5</div>
+                    </div>
+                    <div class="rec-content">
+                        <h4>Mussoorie: Queen of Hills</h4>
+                        <p>A popular hill station known for its cascading waterfalls and colonial charm.</p>
+                    </div>
+                </div>
+                <div class="rec-card">
+                    <div class="rec-image" style="background-image: url('https://images.unsplash.com/photo-1544605051-9e7978c4a169?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');">
+                        <div class="rating"><i data-lucide="star" style="width: 14px; height: 14px; fill: #f1c40f;"></i> 4.9</div>
+                    </div>
+                    <div class="rec-content">
+                        <h4>Char Dham Yatra Circuit</h4>
+                        <p>The highly revered pilgrimage circuit covering Yamunotri, Gangotri, Kedarnath, and Badrinath.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <h2 class="section-title fade-in-up" data-delay="1000">Events & Hidden Gems</h2>
+            <div class="events-carousel fade-in-up" data-delay="1100">
+                <div class="event-card">
+                    <h5><i data-lucide="calendar-check"></i> International Yoga Festival 2025</h5>
+                    <p>Attend workshops and sessions from world-renowned yoga gurus in Rishikesh (March 1-7).</p>
+                </div>
+                <div class="event-card hidden-gem">
+                    <h5><i data-lucide="gem"></i> Pindari Glacier Trek</h5>
+                    <p>A stunning, moderately challenging trek offering spectacular views of Nanda Devi and Trishul.</p>
+                </div>
+                <div class="event-card hidden-gem">
+                    <h5><i data-lucide="gem"></i> Khirsu Village Homestays</h5>
+                    <p>Experience authentic Garhwali culture and stunning sunset views away from tourist crowds.</p>
+                </div>
+                <div class="event-card">
+                    <h5><i data-lucide="calendar-check"></i> Autumn Festival Mela</h5>
+                    <p>A traditional cultural fair held in various Kumaon villages during the post-monsoon season.</p>
+                </div>
+            </div>
+        </div> 
+        
+        <div id="routes-page" style="display: none;">
+            <div class="routes-container">
+
+                <h2 class="section-title fade-in-up" data-delay="0">My Saved Routes</h2>
+                <div class="route-card fade-in-up" data-delay="100">
+                    <div class="route-header">
+                        <div class="route-icon"><i data-lucide="map-pin"></i></div>
+                        <h4>Dehradun to Mussoorie</h4>
+                        <span class="route-status traffic-low">LOW TRAFFIC</span>
+                    </div>
+                    <div class="route-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Distance</span>
+                            <span class="detail-value">35 km</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Est. Time</span>
+                            <span class="detail-value">1h 15m</span>
+                        </div>
+                    </div>
+                    <p>The classic ascent. Road conditions are excellent. Expect slight delays near Barlowganj.</p>
+                </div>
+
+                <h2 class="section-title fade-in-up" data-delay="200">Recommended Adventure Routes</h2>
+                <div class="route-card fade-in-up" data-delay="300">
+                    <div class="route-header">
+                        <div class="route-icon"><i data-lucide="car"></i></div>
+                        <h4>Rishikesh to Valley of Flowers (Base)</h4>
+                        <span class="route-status traffic-medium">MEDIUM TRAFFIC</span>
+                    </div>
+                    <div class="route-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Distance</span>
+                            <span class="detail-value">250 km</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Est. Time</span>
+                            <span class="detail-value">8h 30m</span>
+                        </div>
+                    </div>
+                    <p>A long route through winding mountain roads. Landslide alert lifted, proceed with caution.</p>
+                </div>
+                
+                <div class="route-card fade-in-up" data-delay="400">
+                    <div class="route-header">
+                        <div class="route-icon"><i data-lucide="car"></i></div>
+                        <h4>Jim Corbett National Park Loop</h4>
+                        <span class="route-status traffic-high">HIGH TRAFFIC</span>
+                    </div>
+                    <div class="route-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Distance</span>
+                            <span class="detail-value">80 km</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Est. Time</span>
+                            <span class="detail-value">3h 00m</span>
+                        </div>
+                    </div>
+                    <p>Heavy weekend safari traffic near Dhikala zone. Best time to travel is before 6 AM.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="map-page" style="display: none;">
+            <h2 class="section-title fade-in-up" data-delay="0">Live Interactive Map</h2>
+            <div class="map-container fade-in-up" data-delay="100">
+                <img src="https://images.unsplash.com/photo-1549487922-b9e38d451ceb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Map Placeholder" class="map-placeholder">
+                <div class="map-content">
+                    <h4>Current Location: Dehradun</h4>
+                    <p>Find nearby temples, cafes, and recommended hidden paths optimized for your vehicle.</p>
+                    <button><i data-lucide="navigation"></i> Start Guided Tour</button>
+                </div>
+            </div>
+            
+            <h2 class="section-title fade-in-up" data-delay="200">Map Quick Access</h2>
+            <div class="quick-access-grid fade-in-up" data-delay="300">
+                <div class="theme-tile">
+                    <i data-lucide="gas-station"></i>
+                    <span>Fuel Stations</span>
+                </div>
+                <div class="theme-tile">
+                    <i data-lucide="hospital"></i>
+                    <span>Hospitals</span>
+                </div>
+                <div class="theme-tile">
+                    <i data-lucide="coffee"></i>
+                    <span>Cafes & Rest</span>
+                </div>
+                <div class="theme-tile">
+                    <i data-lucide="cloud-lightning"></i>
+                    <span>Weather Radar</span>
+                </div>
+                <div class="theme-tile">
+                    <i data-lucide="camera"></i>
+                    <span>Photo Spots</span>
+                </div>
+                <div class="theme-tile">
+                    <i data-lucide="shield-half"></i>
+                    <span>Police/Safety</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="discover-page" style="display: none;">
+            
+            <h2 class="section-title fade-in-up" data-delay="200">Featured Experiences</h2>
+            <div class="experience-carousel fade-in-up" data-delay="300">
+                <div class="mini-card">
+                    <i data-lucide="mountain"></i>
+                    <span>Peak Views</span>
+                </div>
+                <div class="mini-card">
+                    <i data-lucide="water"></i>
+                    <span>River Rafting</span>
+                </div>
+                <div class="mini-card">
+                    <i data-lucide="campfire"></i>
+                    <span>Camping</span>
+                </div>
+                <div class="mini-card">
+                    <i data-lucide="bike"></i>
+                    <span>Cycling Trails</span>
+                </div>
+                <div class="mini-card">
+                    <i data-lucide="bird"></i>
+                    <span>Bird Watching</span>
+                </div>
+            </div>
+
+            <h2 class="section-title fade-in-up" data-delay="400">Top Rated Places</h2>
+            <div class="filter-controls fade-in-up" data-delay="500">
+                <button class="filter-button active">All</button>
+                <button class="filter-button">Spiritual</button>
+                <button class="filter-button">Lakes</button>
+                <button class="filter-button">Adventure</button>
+                <button class="filter-button">Trekking</button>
+                <button class="filter-button">Hotels</button>
+            </div>
+            
+            <div class="discover-grid place-listing fade-in-up" data-delay="600">
+                <div class="place-card">
+                    <img class="place-image" src="https://images.unsplash.com/photo-1590740921430-85f269c279a0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Rishikesh">
+                    <div class="place-info">
+                        <h3>Rishikesh</h3>
+                        <p>The global capital of Yoga and gateway to the Himalayas.</p>
+                        <div class="place-actions">
+                            <button><i data-lucide="route" style="width: 14px; height: 14px;"></i> Get Directions</button>
+                            <button class="secondary"><i data-lucide="bookmark" style="width: 14px; height: 14px;"></i> Save</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="place-card">
+                    <img class="place-image" src="https://images.unsplash.com/photo-1559981881-3006456f4d36?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Nainital">
+                    <div class="place-info">
+                        <h3>Naini Lake</h3>
+                        <p>A natural freshwater body in the Kumaon region, surrounded by hills.</p>
+                        <div class="place-actions">
+                            <button><i data-lucide="route" style="width: 14px; height: 14px;"></i> Get Directions</button>
+                            <button class="secondary"><i data-lucide="bookmark" style="width: 14px; height: 14px;"></i> Save</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="place-card">
+                    <img class="place-image" src="https://images.unsplash.com/photo-1627993359654-e4a8677c7c34?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Mussoorie">
+                    <div class="place-info">
+                        <h3>Mussoorie</h3>
+                        <p>The 'Queen of the Hills,' famous for its Mall Road and scenic views.</p>
+                        <div class="place-actions">
+                            <button><i data-lucide="route" style="width: 14px; height: 14px;"></i> Get Directions</button>
+                            <button class="secondary"><i data-lucide="bookmark" style="width: 14px; height: 14px;"></i> Save</button>
+                        </div>
+                    </div>
+                </div>
+                 <div class="place-card">
+                    <img class="place-image" src="https://images.unsplash.com/photo-1548057279-8472f7d54988?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Jim Corbett">
+                    <div class="place-info">
+                        <h3>Jim Corbett N. P.</h3>
+                        <p>India's oldest national park, famed for the Bengal Tiger.</p>
+                        <div class="place-actions">
+                            <button><i data-lucide="route" style="width: 14px; height: 14px;"></i> Book Safari</button>
+                            <button class="secondary"><i data-lucide="video" style="width: 14px; height: 14px;"></i> Videos</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="place-card">
+                    <img class="place-image" src="https://images.unsplash.com/photo-1588698948197-2a5b6d5733f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Auli Ski">
+                    <div class="place-info">
+                        <h3>Auli Ski Resort</h3>
+                        <p>India's prime winter sports destination with stunning Himalayan views.</p>
+                        <div class="place-actions">
+                            <button><i data-lucide="snowflake" style="width: 14px; height: 14px;"></i> View Snow Report</button>
+                            <button class="secondary"><i data-lucide="bookmark" style="width: 14px; height: 14px;"></i> Save</button>
+                        </div>
+                    </div>
+                </div>
+                 <div class="place-card">
+                    <img class="place-image" src="https://images.unsplash.com/photo-1597813586828-569b9177114b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Valley of Flowers">
+                    <div class="place-info">
+                        <h3>Valley of Flowers</h3>
+                        <p>A UNESCO site known for endemic alpine flora and stunning trek routes.</p>
+                        <div class="place-actions">
+                            <button><i data-lucide="hiking" style="width: 14px; height: 14px;"></i> Trek Guide</button>
+                            <button class="secondary"><i data-lucide="bookmark" style="width: 14px; height: 14px;"></i> Save</button>
+                        </div>
+                    </div>
+                </div>
+                 <div class="place-card">
+                    <img class="place-image" src="https://images.unsplash.com/photo-1621510424698-c11571d2342d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Haridwar Ganga Aarti">
+                    <div class="place-info">
+                        <h3>Har Ki Pauri, Haridwar</h3>
+                        <p>The sacred ghat where the Ganga Aarti takes place every evening.</p>
+                        <div class="place-actions">
+                            <button><i data-lucide="church" style="width: 14px; height: 14px;"></i> View Aarti Times</button>
+                            <button class="secondary"><i data-lucide="bookmark" style="width: 14px; height: 14px;"></i> Save</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="section-title fade-in-up" data-delay="700">Video Guides & Vlogs</h2>
+            <div class="video-guides-carousel fade-in-up" data-delay="800">
+                <div class="guide-card">
+                    <div class="guide-image guide-1">
+                        <i data-lucide="play-circle"></i>
+                    </div>
+                    <div class="guide-content">
+                        <h4>A Spiritual Journey to Badrinath</h4>
+                        <p>A 5-day guide to the most sacred shrine.</p>
+                    </div>
+                </div>
+                <div class="guide-card">
+                    <div class="guide-image guide-2">
+                        <i data-lucide="play-circle"></i>
+                    </div>
+                    <div class="guide-content">
+                        <h4>Top 5 Adventure Spots in Rishikesh</h4>
+                        <p>Rafting, Bungee Jumping, and more adrenaline kicks.</p>
+                    </div>
+                </div>
+                <div class="guide-card">
+                    <div class="guide-image guide-3">
+                        <i data-lucide="play-circle"></i>
+                    </div>
+                    <div class="guide-content">
+                        <h4>Uttarakhand's Food Trail</h4>
+                        <p>Must-try local cuisine: Garhwali and Kumaoni dishes.</p>
+                    </div>
+                </div>
+                <div class="guide-card">
+                    <div class="guide-image guide-4" style="background-image: url('https://images.unsplash.com/photo-1597479482594-5b4d7f72f2e5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');">
+                        <i data-lucide="play-circle"></i>
+                    </div>
+                    <div class="guide-content">
+                        <h4>Hidden Glamping Spots in Kumaon</h4>
+                        <p>Luxury tents and panoramic views for a premium stay experience.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div> 
+        
+    </div> 
+    
+    <div class="nav-bar">
+        <div class="nav-inner">
+            <button class="nav-item active" data-page="home">
+                <i data-lucide="home"></i>
+                <span>Home</span>
+            </button>
+            <button class="nav-item" data-page="discover">
+                <i data-lucide="compass"></i>
+                <span>Discover</span>
+            </button>
+            <button class="nav-item" data-page="routes">
+                <i data-lucide="route"></i>
+                <span>Routes</span>
+            </button>
+            <button class="nav-item" data-page="map">
+                <i data-lucide="map"></i>
+                <span>Map</span>
+            </button>
+            <button class="nav-item" data-page="more">
+                <i data-lucide="menu"></i>
+                <span>More</span>
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
